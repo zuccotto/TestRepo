@@ -31,7 +31,7 @@ class PyWebdeplStack(Stack):
             "PyWebDeploymentDistribution",
             default_root_object="index.html",
             default_behavior=aws_cloudfront.BehaviorOptions(
-                origin=aws_cloudfront_origins.S3Origin(
+                origin=aws_cloudfront_origins.S3BucketOrigin(
                     deployment_bucket, origin_access_identity=origin_identity
                 )
             ),
